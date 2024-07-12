@@ -30,6 +30,8 @@ dependencies:
   intl: ^0.17.0
   lottie: ^3.0.0
   favorite_button: ^0.0.4
+  image_picker: ^1.0.0
+
 
 
 dev_dependencies:
@@ -42,6 +44,7 @@ dev_dependencies:
   freezed_annotation: ^2.2.0
   flutter_gen_runner:
   flutter_lints: ^2.0.0
+
 
 flutter_launcher_icons:
   android: "launcher_icon"

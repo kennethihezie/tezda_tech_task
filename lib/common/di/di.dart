@@ -22,6 +22,10 @@ import 'package:tezda_app/modules/product/domain/usecases/get_all_product_usecas
 import 'package:tezda_app/modules/product/domain/usecases/get_categories_usecase.dart';
 import 'package:tezda_app/modules/product/domain/usecases/get_products_in_category_usecase.dart';
 import 'package:tezda_app/modules/product/domain/usecases/get_single_product_usecase.dart';
+import 'package:tezda_app/modules/profile/data/data_source/profile_api_datasource.dart';
+import 'package:tezda_app/modules/profile/data/repository/profile_repository.dart';
+import 'package:tezda_app/modules/profile/domain/usecases/edit_user_usecase.dart';
+import 'package:tezda_app/modules/profile/domain/usecases/get_user_usecase.dart';
 
 
 GetIt locator = GetIt.instance;
@@ -71,4 +75,12 @@ Future<void> setUpLocator() async {
 
   locator.registerSingleton<GetProductSingleUseCase>(GetProductSingleUseCase(repository: locator.get()));
 
+
+  locator.registerSingleton<ProfileApiDataSource>(ProfileApiDataSource());
+
+  locator.registerSingleton<ProfileRepository>(ProfileRepository(apiDataSource: locator.get()));
+
+  locator.registerSingleton<GetUserUseCase>(GetUserUseCase(repository: locator.get()));
+
+  locator.registerSingleton<EditUserUseCase>(EditUserUseCase(repository: locator.get()));
 }

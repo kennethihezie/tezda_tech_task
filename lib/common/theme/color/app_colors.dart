@@ -26,5 +26,6 @@ class AppColors {
   static const Color yellow = Colors.yellow;
   static const shadowColor = Color(0xFFA9A9A9);
   static const shadowColor2 = Color(0xFFE3E3E3);
+  static const Color backgroundGrey = Color(0xffF2F2F2);
 
 }

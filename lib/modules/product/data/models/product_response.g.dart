@@ -15,6 +15,9 @@ _$ProductResponseImpl _$$ProductResponseImplFromJson(
       category: json['category'] as String?,
       description: json['description'] as String?,
       image: json['image'] as String?,
+      rating: json['rating'] == null
+          ? null
+          : RatingData.fromJson(json['rating'] as Map<String, dynamic>),
       isFavourite: json['isFavourite'] as bool? ?? false,
     );
 
@@ -27,5 +30,18 @@ Map<String, dynamic> _$$ProductResponseImplToJson(
       'category': instance.category,
       'description': instance.description,
       'image': instance.image,
+      'rating': instance.rating,
       'isFavourite': instance.isFavourite,
+    };
+
+_$RatingDataImpl _$$RatingDataImplFromJson(Map<String, dynamic> json) =>
+    _$RatingDataImpl(
+      rate: json['rate'] as num?,
+      count: json['count'] as num?,
+    );
+
+Map<String, dynamic> _$$RatingDataImplToJson(_$RatingDataImpl instance) =>
+    <String, dynamic>{
+      'rate': instance.rate,
+      'count': instance.count,
     };

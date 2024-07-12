@@ -29,8 +29,11 @@ class $AssetsPngGen {
   AssetGenImage get emptyState =>
       const AssetGenImage('assets/png/empty_state.png');
 
+  /// File path: assets/png/profile.png
+  AssetGenImage get profile => const AssetGenImage('assets/png/profile.png');
+
   /// List of all assets
-  List<AssetGenImage> get values => [emptyState];
+  List<AssetGenImage> get values => [emptyState, profile];
 }
 
 class $AssetsSvgGen {
@@ -47,6 +50,14 @@ class $AssetsSvgGen {
   SvgGenImage get checkboxUncheck =>
       const SvgGenImage('assets/svg/checkbox_uncheck.svg');
 
+  /// File path: assets/svg/edit_profile.svg
+  SvgGenImage get editProfile =>
+      const SvgGenImage('assets/svg/edit_profile.svg');
+
+  /// File path: assets/svg/edit_profile_img.svg
+  SvgGenImage get editProfileImg =>
+      const SvgGenImage('assets/svg/edit_profile_img.svg');
+
   /// File path: assets/svg/eye_open.svg
   SvgGenImage get eyeOpen => const SvgGenImage('assets/svg/eye_open.svg');
 
@@ -59,23 +70,45 @@ class $AssetsSvgGen {
   /// File path: assets/svg/heart.svg
   SvgGenImage get heart => const SvgGenImage('assets/svg/heart.svg');
 
+  /// File path: assets/svg/home.svg
+  SvgGenImage get home => const SvgGenImage('assets/svg/home.svg');
+
+  /// File path: assets/svg/logout.svg
+  SvgGenImage get logout => const SvgGenImage('assets/svg/logout.svg');
+
+  /// File path: assets/svg/more.svg
+  SvgGenImage get more => const SvgGenImage('assets/svg/more.svg');
+
+  /// File path: assets/svg/order.svg
+  SvgGenImage get order => const SvgGenImage('assets/svg/order.svg');
+
   /// File path: assets/svg/search.svg
   SvgGenImage get search => const SvgGenImage('assets/svg/search.svg');
 
   /// File path: assets/svg/uncheck.svg
   SvgGenImage get uncheck => const SvgGenImage('assets/svg/uncheck.svg');
 
+  /// File path: assets/svg/wallet.svg
+  SvgGenImage get wallet => const SvgGenImage('assets/svg/wallet.svg');
+
   /// List of all assets
   List<SvgGenImage> get values => [
         check,
         checkboxCheck,
         checkboxUncheck,
+        editProfile,
+        editProfileImg,
         eyeOpen,
         eyesClosed,
         filter,
         heart,
+        home,
+        logout,
+        more,
+        order,
         search,
-        uncheck
+        uncheck,
+        wallet
       ];
 }
 
