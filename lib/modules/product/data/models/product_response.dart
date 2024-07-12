@@ -12,9 +12,22 @@ abstract class ProductResponse with _$ProductResponse {
     @JsonKey(name: 'category') String? category,
     @JsonKey(name: 'description') String? description,
     @JsonKey(name: 'image') String? image,
+    @JsonKey(name: 'rating') RatingData? rating,
+
     @Default(false) bool? isFavourite,
   }) = _ProductResponse;
 
   factory ProductResponse.fromJson(Map<String, dynamic> json) =>
       _$ProductResponseFromJson(json);
+}
+
+@freezed
+abstract class RatingData with _$RatingData {
+  const factory RatingData({
+    @JsonKey(name: 'rate') num? rate,
+    @JsonKey(name: 'count') num? count,
+  }) = _RatingData;
+
+  factory RatingData.fromJson(Map<String, dynamic> json) =>
+      _$RatingDataFromJson(json);
 }

@@ -62,6 +62,12 @@ class ProductDetailsScreen extends ConsumerWidget {
             Text(product.description ?? '',
                 style: AppTextStyle.body.medium
                     .copyWith(fontSize: 13, color: AppColors.textColor)),
+            16.verticalGap,
+            Text('Rating: ${product.rating?.rate}',
+                style: AppTextStyle.body.largeMedium.copyWith(fontSize: 14)),
+            8.verticalGap,
+            Text('Review Count: ${product.rating?.count}',
+                style: AppTextStyle.body.largeMedium.copyWith(fontSize: 14)),
             const Spacer(),
             AppButton.primary(title: 'ADD TO CART', onTap: () {}),
             20.verticalGap

@@ -7,5 +7,7 @@ abstract class AppPages {
   static String productListingScreen = '/productListingScreen';
   static String productDetailsScreen = '/productDetailsScreen';
   static String productSearchScreen = '/productSearchScreen';
+  static String profileScreen = '/profileScreen';
+  static String editProfileScreen = '/editProfileScreen';
 
 }
