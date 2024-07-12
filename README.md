@@ -39,7 +39,7 @@ Riverpod is used for state management, providing a predictable and efficient way
 
 1. Clone the repository:
    ```sh
-   git clone https://github.com/kennethihezie/tezda_app.git
+   git clone https://github.com/kennethihezie/tezda_tech_task.git
    cd tezda_app 
    ```
 
