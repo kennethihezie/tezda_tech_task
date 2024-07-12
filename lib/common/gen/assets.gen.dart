@@ -12,14 +12,25 @@ import 'package:flutter/services.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:vector_graphics/vector_graphics.dart';
 
+class $AssetsAnimationsGen {
+  const $AssetsAnimationsGen();
+
+  /// File path: assets/animations/loading_animation.json
+  String get loadingAnimation => 'assets/animations/loading_animation.json';
+
+  /// List of all assets
+  List<String> get values => [loadingAnimation];
+}
+
 class $AssetsPngGen {
   const $AssetsPngGen();
 
-  /// File path: assets/png/tezda.png
-  AssetGenImage get tezda => const AssetGenImage('assets/png/tezda.png');
+  /// File path: assets/png/empty_state.png
+  AssetGenImage get emptyState =>
+      const AssetGenImage('assets/png/empty_state.png');
 
   /// List of all assets
-  List<AssetGenImage> get values => [tezda];
+  List<AssetGenImage> get values => [emptyState];
 }
 
 class $AssetsSvgGen {
@@ -42,17 +53,36 @@ class $AssetsSvgGen {
   /// File path: assets/svg/eyes_closed.svg
   SvgGenImage get eyesClosed => const SvgGenImage('assets/svg/eyes_closed.svg');
 
+  /// File path: assets/svg/filter.svg
+  SvgGenImage get filter => const SvgGenImage('assets/svg/filter.svg');
+
+  /// File path: assets/svg/heart.svg
+  SvgGenImage get heart => const SvgGenImage('assets/svg/heart.svg');
+
+  /// File path: assets/svg/search.svg
+  SvgGenImage get search => const SvgGenImage('assets/svg/search.svg');
+
   /// File path: assets/svg/uncheck.svg
   SvgGenImage get uncheck => const SvgGenImage('assets/svg/uncheck.svg');
 
   /// List of all assets
-  List<SvgGenImage> get values =>
-      [check, checkboxCheck, checkboxUncheck, eyeOpen, eyesClosed, uncheck];
+  List<SvgGenImage> get values => [
+        check,
+        checkboxCheck,
+        checkboxUncheck,
+        eyeOpen,
+        eyesClosed,
+        filter,
+        heart,
+        search,
+        uncheck
+      ];
 }
 
 class AppAssets {
   AppAssets._();
 
+  static const $AssetsAnimationsGen animations = $AssetsAnimationsGen();
   static const $AssetsPngGen png = $AssetsPngGen();
   static const $AssetsSvgGen svg = $AssetsSvgGen();
 }

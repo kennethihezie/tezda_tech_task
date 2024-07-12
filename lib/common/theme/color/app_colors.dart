@@ -21,7 +21,10 @@ class AppColors {
   static const Color shadowInactiveColor = Color(0xFF9F9E9E);
   static const Color bottomNavBarInActive = Color(0xFF6B7280);
   static const Color border = Color(0xFFE5E7EB);
-  static const Color background = Color(0xFFE4E5E7);
+  static const Color background = Color(0xFFF4F4F4);
   static const Color pending = Color(0xFFB45309);
   static const Color yellow = Colors.yellow;
+  static const shadowColor = Color(0xFFA9A9A9);
+  static const shadowColor2 = Color(0xFFE3E3E3);
+
 }
