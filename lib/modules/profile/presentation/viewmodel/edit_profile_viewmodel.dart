@@ -30,6 +30,11 @@ class EditProfileViewmodel extends BaseViewModel {
     notifyListeners();
   }
 
+  init(User? user){
+    form.emailField.value = user?.email ?? '';
+    form.fullNameField.value = user?.fullName ?? '';
+  }
+
   void editProfile(BuildContext context, WidgetRef ref) {
     NetworkBoundResource.call<User?>(method: () {
       final payload = User(email: form.emailField.getValueAsString(), fullName: form.fullNameField.getValueAsString(), profileUrl: image.path);
