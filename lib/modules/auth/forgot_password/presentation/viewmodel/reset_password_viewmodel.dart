@@ -24,7 +24,7 @@ class ResetPasswordViewmodel extends BaseViewModel {
     notifyListeners();
   }
 
-  void resetPassword({required BuildContext context, required String email, required String otp}){
+  void resetPassword({required BuildContext context}){
     NetworkBoundResource.call<bool>(method: () {
       uiState = uiState.copyWith(isLoading: true);
       final payload = ResetPasswordPayload(newPassword: form.passwordField.getValueAsString(), confirmPassword: form.confirmPasswordField.getValueAsString());

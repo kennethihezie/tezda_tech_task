@@ -21,17 +21,18 @@ ProductResponse _$ProductResponseFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$ProductResponse {
   @JsonKey(name: 'id')
-  String? get id => throw _privateConstructorUsedError;
+  num? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'title')
   String? get title => throw _privateConstructorUsedError;
   @JsonKey(name: 'price')
-  String? get price => throw _privateConstructorUsedError;
+  num? get price => throw _privateConstructorUsedError;
   @JsonKey(name: 'category')
   String? get category => throw _privateConstructorUsedError;
   @JsonKey(name: 'description')
   String? get description => throw _privateConstructorUsedError;
   @JsonKey(name: 'image')
   String? get image => throw _privateConstructorUsedError;
+  bool? get isFavourite => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -46,12 +47,13 @@ abstract class $ProductResponseCopyWith<$Res> {
       _$ProductResponseCopyWithImpl<$Res, ProductResponse>;
   @useResult
   $Res call(
-      {@JsonKey(name: 'id') String? id,
+      {@JsonKey(name: 'id') num? id,
       @JsonKey(name: 'title') String? title,
-      @JsonKey(name: 'price') String? price,
+      @JsonKey(name: 'price') num? price,
       @JsonKey(name: 'category') String? category,
       @JsonKey(name: 'description') String? description,
-      @JsonKey(name: 'image') String? image});
+      @JsonKey(name: 'image') String? image,
+      bool? isFavourite});
 }
 
 /// @nodoc
@@ -73,12 +75,13 @@ class _$ProductResponseCopyWithImpl<$Res, $Val extends ProductResponse>
     Object? category = freezed,
     Object? description = freezed,
     Object? image = freezed,
+    Object? isFavourite = freezed,
   }) {
     return _then(_value.copyWith(
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as num?,
       title: freezed == title
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
@@ -86,7 +89,7 @@ class _$ProductResponseCopyWithImpl<$Res, $Val extends ProductResponse>
       price: freezed == price
           ? _value.price
           : price // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as num?,
       category: freezed == category
           ? _value.category
           : category // ignore: cast_nullable_to_non_nullable
@@ -99,6 +102,10 @@ class _$ProductResponseCopyWithImpl<$Res, $Val extends ProductResponse>
           ? _value.image
           : image // ignore: cast_nullable_to_non_nullable
               as String?,
+      isFavourite: freezed == isFavourite
+          ? _value.isFavourite
+          : isFavourite // ignore: cast_nullable_to_non_nullable
+              as bool?,
     ) as $Val);
   }
 }
@@ -112,12 +119,13 @@ abstract class _$$ProductResponseImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: 'id') String? id,
+      {@JsonKey(name: 'id') num? id,
       @JsonKey(name: 'title') String? title,
-      @JsonKey(name: 'price') String? price,
+      @JsonKey(name: 'price') num? price,
       @JsonKey(name: 'category') String? category,
       @JsonKey(name: 'description') String? description,
-      @JsonKey(name: 'image') String? image});
+      @JsonKey(name: 'image') String? image,
+      bool? isFavourite});
 }
 
 /// @nodoc
@@ -137,12 +145,13 @@ class __$$ProductResponseImplCopyWithImpl<$Res>
     Object? category = freezed,
     Object? description = freezed,
     Object? image = freezed,
+    Object? isFavourite = freezed,
   }) {
     return _then(_$ProductResponseImpl(
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as num?,
       title: freezed == title
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
@@ -150,7 +159,7 @@ class __$$ProductResponseImplCopyWithImpl<$Res>
       price: freezed == price
           ? _value.price
           : price // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as num?,
       category: freezed == category
           ? _value.category
           : category // ignore: cast_nullable_to_non_nullable
@@ -163,6 +172,10 @@ class __$$ProductResponseImplCopyWithImpl<$Res>
           ? _value.image
           : image // ignore: cast_nullable_to_non_nullable
               as String?,
+      isFavourite: freezed == isFavourite
+          ? _value.isFavourite
+          : isFavourite // ignore: cast_nullable_to_non_nullable
+              as bool?,
     ));
   }
 }
@@ -176,20 +189,21 @@ class _$ProductResponseImpl implements _ProductResponse {
       @JsonKey(name: 'price') this.price,
       @JsonKey(name: 'category') this.category,
       @JsonKey(name: 'description') this.description,
-      @JsonKey(name: 'image') this.image});
+      @JsonKey(name: 'image') this.image,
+      this.isFavourite = false});
 
   factory _$ProductResponseImpl.fromJson(Map<String, dynamic> json) =>
       _$$ProductResponseImplFromJson(json);
 
   @override
   @JsonKey(name: 'id')
-  final String? id;
+  final num? id;
   @override
   @JsonKey(name: 'title')
   final String? title;
   @override
   @JsonKey(name: 'price')
-  final String? price;
+  final num? price;
   @override
   @JsonKey(name: 'category')
   final String? category;
@@ -199,10 +213,13 @@ class _$ProductResponseImpl implements _ProductResponse {
   @override
   @JsonKey(name: 'image')
   final String? image;
+  @override
+  @JsonKey()
+  final bool? isFavourite;
 
   @override
   String toString() {
-    return 'ProductResponse(id: $id, title: $title, price: $price, category: $category, description: $description, image: $image)';
+    return 'ProductResponse(id: $id, title: $title, price: $price, category: $category, description: $description, image: $image, isFavourite: $isFavourite)';
   }
 
   @override
@@ -217,13 +234,15 @@ class _$ProductResponseImpl implements _ProductResponse {
                 other.category == category) &&
             (identical(other.description, description) ||
                 other.description == description) &&
-            (identical(other.image, image) || other.image == image));
+            (identical(other.image, image) || other.image == image) &&
+            (identical(other.isFavourite, isFavourite) ||
+                other.isFavourite == isFavourite));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, id, title, price, category, description, image);
+  int get hashCode => Object.hash(
+      runtimeType, id, title, price, category, description, image, isFavourite);
 
   @JsonKey(ignore: true)
   @override
@@ -242,25 +261,26 @@ class _$ProductResponseImpl implements _ProductResponse {
 
 abstract class _ProductResponse implements ProductResponse {
   const factory _ProductResponse(
-      {@JsonKey(name: 'id') final String? id,
+      {@JsonKey(name: 'id') final num? id,
       @JsonKey(name: 'title') final String? title,
-      @JsonKey(name: 'price') final String? price,
+      @JsonKey(name: 'price') final num? price,
       @JsonKey(name: 'category') final String? category,
       @JsonKey(name: 'description') final String? description,
-      @JsonKey(name: 'image') final String? image}) = _$ProductResponseImpl;
+      @JsonKey(name: 'image') final String? image,
+      final bool? isFavourite}) = _$ProductResponseImpl;
 
   factory _ProductResponse.fromJson(Map<String, dynamic> json) =
       _$ProductResponseImpl.fromJson;
 
   @override
   @JsonKey(name: 'id')
-  String? get id;
+  num? get id;
   @override
   @JsonKey(name: 'title')
   String? get title;
   @override
   @JsonKey(name: 'price')
-  String? get price;
+  num? get price;
   @override
   @JsonKey(name: 'category')
   String? get category;
@@ -270,6 +290,8 @@ abstract class _ProductResponse implements ProductResponse {
   @override
   @JsonKey(name: 'image')
   String? get image;
+  @override
+  bool? get isFavourite;
   @override
   @JsonKey(ignore: true)
   _$$ProductResponseImplCopyWith<_$ProductResponseImpl> get copyWith =>

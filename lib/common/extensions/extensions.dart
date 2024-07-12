@@ -2,6 +2,24 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
 
+import 'package:intl/intl.dart';
+
+extension CurrencyUtil on num {
+  static final f = NumberFormat("###,###,###,###,###,###,##0.00", "en_NG");
+  static final _f2 = NumberFormat("#,##0", "en_NG");
+
+  String get formatCurrencyWithoutSymbolAndDividing => f.format(this);
+
+  String get formatCurrency => "₦${f.format(this / 100)}";
+
+  String get formatCurrencyWithoutDividing => "\$${f.format(this)}";
+
+  String get formatCurrencyWithoutDividingAndZero => "\$${_f2.format(this)}";
+
+  String get formatCurrencyWithoutSymbol => f.format(this / 100);
+
+  String get formatCurrencyWithoutLeadingZero => "\$${_f2.format(this / 100)}";
+}
 
 extension BuildContextEx on BuildContext {
   MediaQueryData get mediaQuery => MediaQuery.of(this);

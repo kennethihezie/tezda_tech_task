@@ -12,8 +12,7 @@ import 'package:tezda_app/widgets/inputs/app_input.dart';
 import 'package:tezda_app/widgets/page/auto_page.dart';
 
 class ResetPasswordScreen extends ConsumerWidget {
-  const ResetPasswordScreen({super.key, required this.email, required this.otp});
-  final String email, otp;
+  const ResetPasswordScreen({super.key});
 
 
   @override
@@ -27,7 +26,7 @@ class ResetPasswordScreen extends ConsumerWidget {
               title: 'Create New Password',
               subTitle: 'Hey there, welcome back!',
               buttonText: 'Create New Password',
-              callBack: () => vm.resetPassword(context: context, email: email, otp: otp),
+              callBack: () => vm.resetPassword(context: context),
               state: vm.form.validState,
               isLoading: vm.uiState.isLoading,
               bottom: const _BottomSection(),

@@ -6,4 +6,6 @@ abstract class AppPages {
   static String resetPasswordScreen = '/resetPasswordScreen';
   static String productListingScreen = '/productListingScreen';
   static String productDetailsScreen = '/productDetailsScreen';
+  static String productSearchScreen = '/productSearchScreen';
+
 }

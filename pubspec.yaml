@@ -27,6 +27,9 @@ dependencies:
   fluttertoast: ^8.2.2
   pretty_dio_logger: ^1.2.0-beta-1
   flutter_launcher_icons: ^0.13.1
+  intl: ^0.17.0
+  lottie: ^3.0.0
+  favorite_button: ^0.0.4
 
 
 dev_dependencies:
@@ -61,7 +64,7 @@ flutter:
   uses-material-design: true
   generate: false
 
-
   assets:
     - assets/png/
     - assets/svg/
+    - assets/animations/

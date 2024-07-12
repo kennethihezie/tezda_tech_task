@@ -83,9 +83,6 @@ class _$AppBar extends StatelessWidget implements PreferredSizeWidget {
       ),
       automaticallyImplyLeading: automaticallyImpliesLeading,
       actions: actions,
-      leading: automaticallyImpliesLeading
-          ? InkWell(onTap: () => context.pop(), child: const Icon(Icons.chevron_left))
-          : const SizedBox(),
       centerTitle: centerTitle,
       bottom: bottom,
     );
